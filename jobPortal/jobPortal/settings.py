@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +26,9 @@ SECRET_KEY = 'django-insecure-se!4up&e1c3=*m&u6v0(e&h72t_81v7do)phjse^n99-5ed63g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['e734d1d63b2f4592803cb711ec3bd683.vfs.cloud9.eu-west-1.amazonaws.com', 'jobportal-env.eba-ds2dz2gn.eu-west-1.elasticbeanstalk.com']
+
+CSRF_TRUSTED_ORIGINS = ['https://e734d1d63b2f4592803cb711ec3bd683.vfs.cloud9.eu-west-1.amazonaws.com']
 
 
 # Application definition
@@ -55,7 +58,8 @@ ROOT_URLCONF = 'jobPortal.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates'),
+            os.path.join(BASE_DIR,'static')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,7 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -124,8 +128,8 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_DIRS = [
-    # BASE_DIR / "static",
-    "./joblistings/static/",
+    BASE_DIR / "static",
+    # "./joblistings/static/",
 ]
 
-STATIC_ROOT = BASE_DIR / "static"
+STATIC_ROOT = "staticfiles"
