@@ -1,4 +1,4 @@
-version: 0.2
+spiversion: 0.2
 phases:
   install:
     runtime-versions:
@@ -11,12 +11,12 @@ phases:
       - echo "Build started on `date`"
       - echo "Compiling the code"
       - echo `$CODEBUILD_SRC_DIR`
-pre_build:
-  commands:
-    - python --version
-    - pylint $CODEBUILD_SRC_DIR/*.py
-    - echo `$CODEBUILD_SRC_DIR`
-    - pylint $CODEBUILD_SRC_DIR/jobPortal/*.py
+  pre_build:
+    commands:
+      - python --version
+      - pylint $CODEBUILD_SRC_DIR/*.py
+      - echo `$CODEBUILD_SRC_DIR`
+      - pylint $CODEBUILD_SRC_DIR/jobPortal/*.py
 artifacts:
   files:
     - '**/*'
