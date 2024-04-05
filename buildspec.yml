@@ -3,17 +3,20 @@ phases:
   install:
     runtime-versions:
       python: 3.12
-  build:
     commands:
       - pip install --upgrade pip
+      # Install dependencies needed for running the static analysis
       - pip install -r ./jobPortal/requirements.txt
       - pip install pylint
       - echo "Build started on `date`"
       - echo "Compiling the code"
       - echo `$CODEBUILD_SRC_DIR`
-  post_build:
+  
+  pre_build:
     commands:
       - python --version
+      - export PYTHONPATH=.
+      - pylint $CODEBUILD_SRC_DIR/*.py
       - echo `$CODEBUILD_SRC_DIR`
       - pylint $CODEBUILD_SRC_DIR/jobPortal/*.py
 artifacts:
