@@ -6,8 +6,8 @@ phases:
     commands:
       - pip install --upgrade pip
       # Install dependencies needed for running the static analysis
-      - pip install -r ./jobPortal/requirements.txt pylint
-      # - pip install pylint
+      - pip install -r ./jobPortal/requirements.txt
+      - pip install pylint
       # - echo "Build started on `date`"
       # - echo "Compiling the code"
       # - echo `$CODEBUILD_SRC_DIR`
