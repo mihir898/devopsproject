@@ -17,9 +17,9 @@ phases:
   post_build:
     commands:
       - python --version
-      - pylint $CODEBUILD_SRC_DIR/*.py
-      - echo $CODEBUILD_SRC_DIR
       - pylint $CODEBUILD_SRC_DIR/jobPortal/*.py
+      - echo $CODEBUILD_SRC_DIR
+      - pylint $CODEBUILD_SRC_DIR/jobPortal/jobPortal/*.py
 artifacts:
   files:
     - '**/*'
