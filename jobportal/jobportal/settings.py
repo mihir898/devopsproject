@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'jobPortal.urls'
+ROOT_URLCONF = 'jobportal.urls'
 
 TEMPLATES = [
     {
@@ -73,7 +73,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'jobPortal.wsgi.application'
+WSGI_APPLICATION = 'jobportal.wsgi.application'
 
 
 # Database

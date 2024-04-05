@@ -8,7 +8,7 @@ phases:
   build:
     commands:
       - pip install --upgrade pip
-      - pip install -r ./jobPortal/requirements.txt
+      - pip install -r ./jobportal/requirements.txt
       - pip install pylint
       - echo "Build started on date"
       - echo "Compiling the code"
@@ -17,9 +17,9 @@ phases:
   post_build:
     commands:
       - python --version
-      - pylint $CODEBUILD_SRC_DIR/jobPortal/*.py
+      - pylint $CODEBUILD_SRC_DIR/jobportal/*.py
       - echo $CODEBUILD_SRC_DIR
-      - pylint $CODEBUILD_SRC_DIR/jobPortal/jobPortal/*.py
+      - pylint $CODEBUILD_SRC_DIR/jobportal/jobportal/*.py
 artifacts:
   files:
     - '**/*'
