@@ -16,7 +16,7 @@ phases:
     commands:
       - python --version
       # - export PYTHONPATH=.
-      # - pylint $CODEBUILD_SRC_DIR/*.py
+      - pylint $CODEBUILD_SRC_DIR/*.py
       # - echo `$CODEBUILD_SRC_DIR`
       - pylint $CODEBUILD_SRC_DIR/jobPortal/*.py
 artifacts:
