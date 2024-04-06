@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'e734d1d63b2f4592803cb711ec3bd683.vfs.cloud9.eu-west-1.amazonaws.com',
-    'http://jobportal-env.eba-p9uwax9a.eu-west-1.elasticbeanstalk.com'
+    'jobportal-env.eba-p9uwax9a.eu-west-1.elasticbeanstalk.com'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
