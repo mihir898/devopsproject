@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-se!4up&e1c3=*m&u6v0(e&h72t_81v7do)phjse^n99-5ed63g
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'django-env.eba-p9uwax9a.eu-west-1.elasticbeanstalk.com',
     'e734d1d63b2f4592803cb711ec3bd683.vfs.cloud9.eu-west-1.amazonaws.com',
     'jobportal-env.eba-p9uwax9a.eu-west-1.elasticbeanstalk.com'
 ]
