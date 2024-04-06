@@ -32,7 +32,7 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://e734d1d63b2f4592803cb711ec3bd683.vfs.cloud9.eu-west-1.amazonaws.com'
+    'https://jobportalenv.eba-sh88gx3z.eu-west-2.elasticbeanstalk.com'
 ]
 
 
