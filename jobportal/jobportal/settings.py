@@ -27,7 +27,8 @@ SECRET_KEY = 'django-insecure-se!4up&e1c3=*m&u6v0(e&h72t_81v7do)phjse^n99-5ed63g
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'jobportalenv.eba-sh88gx3z.eu-west-2.elasticbeanstalk.com/'
+    'jobportalenv.eba-sh88gx3z.eu-west-2.elasticbeanstalk.com/',
+    'jobportal1env.eba-bkwnuj2r.us-west-2.elasticbeanstalk.com'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
